@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/Todolist/dist/css/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>TO DO Page</title>
+  </head>
+  <body>
+    <header class="headerMain">
+      <div class="headerSon">
+        <section class="logoSec">
+          <div class="logoIcon">
+            <h2>D'</h2>
+            <h3>Cutz Arena</h3>
+          </div>
+
+          <div class="bar">
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+          </div>
+        </section>
+
+        <section class="UlSec">
+          <ul>
+            <li><a href="/Todolist/src/pages/index.html">Home</a></li>
+            <li><a href="/Todolist/src/pages/todo.html">To Do List</a></li>
+          </ul>
+        </section>
+
+        <section class="loginSignUpSec">
+          <a href="/Todolist/src/pages/login.html" class="login">Login</a>
+          <a href="/Todolist/src/pages/signUp.html" class="signUp">Sign Up</a>
+        </section>
+      </div>
+
+      <!-- Responsive Styling -->
+      <div class="mediaDiv">
+        <section class="mediaSec">
+          <ul>
+            <li><a href="/Todolist/src/pages/index.html">Home</a></li>
+            <li><a href="/Todolist/src/pages/todo.html">To Do List</a></li>
+          </ul>
+
+          <div class="loginSignIn">
+            <a href="/Todolist/src/pages/login.html" class="login">Login</a>
+            <a href="/Todolist/src/pages/signUp.html" class="signUp">Sign Up</a>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <main class="toDoMainCon">
+      <section class="toDoSonCon">
+        <h1>Hello! Sorochi</h1>
+
+        <div class="searchAddDiv">
+          <input type="text" name="search" id="search" />
+          <p>Add</p>
+        </div>
+
+        <form action="">
+          <h3>Task List</h3>
+          <div class="formDiv1">
+            <p>By Tuesday get Sass project completed</p>
+            <span><i class="fa-regular fa-trash-can"></i></span>
+          </div>
+
+          <div class="formDiv2">
+            <p>By Wedsnesday get started with sass responsive</p>
+            <span><i class="fa-regular fa-trash-can"></i></span>
+          </div>
+
+          <div class="formDiv3">
+            <p>By Friday, done with Sass class</p>
+            <span><i class="fa-regular fa-trash-can"></i></span>
+          </div>
+
+          <div class="formDiv4">
+            <p>Commence Java Script on Saturday</p>
+            <span><i class="fa-regular fa-trash-can"></i></span>
+          </div>
+          <div class="formDiv5">
+            <p>On Sunday, continue with JS class</p>
+            <span><i class="fa-regular fa-trash-can"></i></span>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      const bar = document.querySelector(".bar");
+      const mediaSec = document.querySelector(".mediaSec");
+
+      bar.addEventListener("click", () => {
+        if (mediaSec.classList.contains("hidden")) {
+          mediaSec.classList.remove("hidden");
+        } else {
+          mediaSec.classList.add("hidden");
+        }
+      });
+    </script>
+
+    <script>
+      const respo = document.querySelector(".respo");
+      const UlCallToAction = document.querySelector(".UlCallToAction");
+
+      bar.addEventListener("click", () => {
+        bar.classList.toggle("active");
+        mediaSec.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>

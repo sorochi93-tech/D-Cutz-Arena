@@ -1,0 +1,90 @@
+@use "sass:math";
+@use "sass:map";
+
+// Variables
+
+// background colors
+$bgColor1: rgb(34, 107, 107);
+$bgColor2: rgb(7, 6, 6);
+$bgColor3: white;
+$bgColor4:  rgba(128, 128, 128, 0.233);
+$bgColor6:  rgba(56, 78, 78, 0.068);
+
+$bgColor5: rgba(6, 43, 43, 0.849);
+
+
+// Colors
+$primaryColor:black;
+$color1: white;
+$color2: rgb(185, 184, 184);
+$color3: rgb(32, 32, 32);
+$color4: rgba(83, 39, 39, 0.74);
+$color5: teal;
+$color6: gray;
+$color7: rgba(199, 196, 196, 0.733);
+$color8: rgba(24, 82, 82, 0.849);
+$color9: rgba(231, 228, 228, 0.815);
+$primaryColor2:rgb(90, 88, 88);
+
+
+// border radius
+$border-radius1: 100px;
+$border-radius2: 12px 12px 0px 0px;
+$border-radius3: 0% 50% 50% 0%;
+$border-radius4: 50px 0px 0px 50px;
+$border-radius5: 0px 50px 50px 0px;
+
+// $bgColor: white;
+// $bgColor2: whitesmoke;
+// $primaryColor: white;
+// $secondaryColor: purple;
+// $logo: purple;
+
+// // // color palatte
+// // // MAP
+// $colors: (
+//   "primaryColor": $primaryColor,
+//   "secondaryColor": $secondaryColor,
+//   "logo": $logo,
+//   "bgcolor": $bgColor,
+//   "bgColor2": $bgColor2,
+// );
+
+// .test-btn {
+//   background-color: map.get($colors, "pink");
+// }
+
+// using @debug
+// @debug map.get($colors, "logo");
+// @debug map.has-key($colors, "secondaryColor");
+// @debug map.has-key($colors, "tertiary");
+// @debug map.remove($colors, "primaryColor");
+// @debug map.merge(
+//   $colors,
+//   (
+//     "teal": teal,
+//   )
+// );
+
+// font size
+$base-font-size: 1rem;
+
+// border radius
+$base-border-radius: 100px;
+
+// USING MATHS
+// multiplications
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
+$font-size-xxl: $base-font-size * 3;
+
+$font-size-xxl: 3rem;
+$font-size-lg: 1.5rem;
+
+// Breakpoints (mobile first)
+$breakpoint-sm: 480px;
+$breakpoint-md: 720px;
+$breakpoint-lg: 960px;
+$breakpoint-xl: 1200px;
+

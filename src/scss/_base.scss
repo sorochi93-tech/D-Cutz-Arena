@@ -1,0 +1,24 @@
+@use 'variables' as vars;
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+
+*,
+::before,
+::after{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    
+}
+ 
+body{
+    background: vars.$bgColor4;
+    // font-family: sans-serif;
+    
+
+    font-size: 14px;
+}
+

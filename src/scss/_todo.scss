@@ -1,0 +1,526 @@
+@use "variables" as vars;
+@use "sass:math";
+@use "mixins" as *;
+
+.toDoMainCon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 3vh;
+  height: auto;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+
+  @include respond(sm) {
+    width: 100%;
+    height: auto;
+    padding: 0 3vh;
+  }
+
+  @include respond(md) {
+    width: 100%;
+    height: auto;
+    padding: 0 5vh;
+  }
+
+  @include respond(lg) {
+    width: 100%;
+    height: auto;
+    padding: 0 20vh;
+  }
+
+  .toDoSonCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: 4vh;
+    background: vars.$bgColor3;
+    padding: 3vh;
+    border-radius: math.div(vars.$border-radius1, 8);
+    margin-bottom: 4vh;
+    
+
+    @include respond(sm) {
+      width: 100%;
+      height: auto;
+    }
+
+    @include respond(md) {
+      width: 100%;
+      height: auto;
+      padding: 5vh;
+    }
+
+    @include respond(lg) {
+      width: 50%;
+      height: auto;
+      padding: 8vh;
+    }
+
+    h1 {
+      margin-top: 5vh;
+      color: vars.$color5;
+      font-size: 30px;
+
+      @include respond(sm) {
+        margin-top: 1vh;
+        font-size: 25px;
+      }
+
+      @include respond(md) {
+        margin-top: 3vh;
+        font-size: 55px;
+      }
+
+      @include respond(lg) {
+        margin-top: 0vh;
+        font-size: 35px;
+      }
+    }
+
+    .searchAddDiv {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      gap: 15px;
+
+      @include respond(sm) {
+        width: 70%;
+        gap: 10px;
+      }
+
+      @include respond(md) {
+        width: 80%;
+        gap: 20px;
+      }
+
+      @include respond(lg) {
+        width: 70%;
+        gap: 10px;
+      }
+
+      input {
+        width: 100%;
+        border: 1px solid rgba(0, 128, 128, 0.219);
+        background: none;
+        color: vars.$color3;
+        outline: none;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: math.div(vars.$border-radius1, 35);
+
+        @include respond(sm) {
+          padding: 8px;
+          font-size: 12px;
+        }
+
+        @include respond(md) {
+          padding: 15px;
+          font-size: 20px;
+        }
+
+        @include respond(lg) {
+          padding: 8px;
+          font-size: 12px;
+        }
+      }
+
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        border: 1px rgba(12, 44, 44, 0.795) solid;
+        padding: 10px;
+        font-size: 15px;
+        background: vars.$bgColor1;
+        color: vars.$color1;
+        border-radius: math.div(vars.$border-radius1, 35);
+
+        @include respond(sm) {
+          padding: 8px;
+          font-size: 12px;
+        }
+
+        @include respond(md) {
+          padding: 15px;
+          font-size: 25px;
+        }
+
+        @include respond(lg) {
+          padding: 8px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      gap: 15px;
+
+      @include respond(sm) {
+        gap: 10px;
+      }
+
+      @include respond(md) {
+        gap: 17px;
+      }
+
+      @include respond(lg) {
+        gap: 10px;
+      }
+
+      h3 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 6px;
+        font-weight: 600;
+        font-size: 18px;
+
+        @include respond(sm) {
+          font-size: 15px;
+        }
+
+        @include respond(md) {
+          font-size: 28px;
+        }
+
+        @include respond(lg) {
+          font-size: 15px;
+        }
+      }
+
+      .formDiv1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border: 1px solid rgba(0, 128, 128, 0.219);
+        background: vars.$bgColor6;
+        color: vars.$color3;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: math.div(vars.$border-radius1, 35);
+        gap: 20px;
+
+        @include respond(sm) {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        @include respond(md) {
+          font-size: 25px;
+          padding: 15px;
+        }
+
+        @include respond(lg) {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 28px;
+          height: 28px;
+          padding: 2px;
+          background: vars.$bgColor1;
+          border-radius: math.div(vars.$border-radius1, 50);
+          font-size: 14px;
+          color: vars.$color1;
+
+          @include respond(sm) {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            padding: 1px;
+          }
+
+          @include respond(md) {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            padding: 2px;
+          }
+
+          @include respond(lg) {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            padding: 1px;
+          }
+        }
+      }
+
+      .formDiv2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border: 1px solid rgba(0, 128, 128, 0.219);
+        background: vars.$bgColor6;
+        color: vars.$color3;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: math.div(vars.$border-radius1, 35);
+        gap: 20px;
+
+        @include respond(sm) {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        @include respond(md) {
+          font-size: 25px;
+          padding: 15px;
+        }
+
+        @include respond(lg) {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 28px;
+          height: 28px;
+          padding: 2px;
+          background: vars.$bgColor1;
+          border-radius: math.div(vars.$border-radius1, 50);
+          font-size: 14px;
+          color: vars.$color1;
+          font-weight: 100;
+
+          @include respond(sm) {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            padding: 1px;
+          }
+
+          @include respond(md) {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            padding: 2px;
+          }
+
+          @include respond(lg) {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            padding: 1px;
+          }
+        }
+      }
+
+      .formDiv3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border: 1px solid rgba(0, 128, 128, 0.219);
+        background: vars.$bgColor6;
+        color: vars.$color3;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: math.div(vars.$border-radius1, 35);
+        gap: 20px;
+
+        @include respond(sm) {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        @include respond(md) {
+          font-size: 25px;
+          padding: 15px;
+        }
+
+        @include respond(lg) {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 28px;
+          height: 28px;
+          padding: 2px;
+          background: vars.$bgColor1;
+          border-radius: math.div(vars.$border-radius1, 50);
+          font-size: 14px;
+          color: vars.$color1;
+
+          @include respond(sm) {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            padding: 1px;
+          }
+
+          @include respond(md) {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            padding: 2px;
+          }
+
+          @include respond(lg) {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            padding: 1px;
+          }
+        }
+      }
+
+      .formDiv4 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border: 1px solid rgba(0, 128, 128, 0.219);
+        background: vars.$bgColor6;
+        color: vars.$color3;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: math.div(vars.$border-radius1, 35);
+        gap: 20px;
+
+        @include respond(sm) {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        @include respond(md) {
+          font-size: 25px;
+          padding: 15px;
+        }
+
+        @include respond(lg) {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 28px;
+          height: 28px;
+          padding: 2px;
+          background: vars.$bgColor1;
+          border-radius: math.div(vars.$border-radius1, 50);
+          font-size: 14px;
+          color: vars.$color1;
+
+          @include respond(sm) {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            padding: 1px;
+          }
+
+          @include respond(md) {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            padding: 2px;
+          }
+
+          @include respond(lg) {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            padding: 1px;
+          }
+        }
+      }
+
+      .formDiv5 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border: 1px solid rgba(0, 128, 128, 0.219);
+        background: vars.$bgColor6;
+        color: vars.$color3;
+        padding: 10px;
+        font-size: 15px;
+        border-radius: math.div(vars.$border-radius1, 35);
+        gap: 20px;
+
+        @include respond(sm) {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        @include respond(md) {
+          font-size: 25px;
+          padding: 15px;
+        }
+
+        @include respond(lg) {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 28px;
+          height: 28px;
+          padding: 2px;
+          background: vars.$bgColor1;
+          border-radius: math.div(vars.$border-radius1, 50);
+          font-size: 14px;
+          color: vars.$color1;
+
+          @include respond(sm) {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            padding: 1px;
+          }
+
+          @include respond(md) {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            padding: 2px;
+          }
+
+          @include respond(lg) {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            padding: 1px;
+          }
+        }
+      }
+    }
+  }
+}

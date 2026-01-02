@@ -1,0 +1,180 @@
+@use "variables" as vars;
+@use "mixins" as *;
+@use "sass:math";
+
+.heroSection {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/Todolist/src/Assets/images/barber3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 7vh;
+  background-position: center;
+
+  @include respond(sm) {
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+  @include respond(md) {
+    background-position: center;
+    width: 100%;
+    height: 110vh;
+  }
+
+  @include respond(lg) {
+    background-position: top;
+    width: 100%;
+    height: 110vh;
+    margin-top: 8vh;
+  }
+
+  .heroSecSonDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+
+    @include respond(sm) {
+      padding: 0 20px;
+    }
+
+    @include respond(md) {
+      padding: 0 5vh;
+    }
+
+    @include respond(lg) {
+      padding: 0 10vh;
+    }
+
+    .welcomeDiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 50px;
+      margin-top: 40vh;
+
+      @include respond(sm) {
+        margin-top: 20vh;
+      }
+
+      @include respond(md) {
+        margin-top: 30vh;
+      }
+
+      @include respond(lg) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 30vh;
+      }
+
+      h1 {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        position: fixed;
+        top: 10%;
+        left: 0%;
+        font-size: 30px;
+        font-weight: 900;
+        font-family: "Times New Roman", Times, serif;
+        color: vars.$primaryColor;
+        // color: vars.$color5;
+        animation: scroll 10s linear infinite;
+
+        @keyframes scroll {
+          0% {
+            transform: translateY(0);
+          }
+
+          50% {
+            transform: translateY(23vh);
+          }
+        }
+
+        @include respond(sm) {
+          font-size: 30px;
+
+          @keyframes scroll {
+            0% {
+              transform: translateY(0);
+            }
+
+            50% {
+              transform: translateY(20vh);
+            }
+          }
+        }
+
+        @include respond(md) {
+          font-size: 64px;
+
+          @keyframes scroll {
+            0% {
+              transform: translateY(0);
+            }
+
+            50% {
+              transform: translateY(28vh);
+            }
+          }
+        }
+
+        @include respond(lg) {
+          font-size: 42px;
+
+          @keyframes scroll {
+            0% {
+              transform: translateY(0);
+            }
+
+            50% {
+              transform: translateY(25vh);
+            }
+          }
+        }
+      }
+
+      p {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 54vh;
+        align-items: center;
+        text-align: center;
+        font-size: 23px;
+        background: rgba(255, 255, 255, 0.459);
+        margin-top: 3vh;
+        padding: 15px;
+        border-radius: math.div(vars.$base-border-radius, 10);
+
+        @include respond(sm) {
+          font-size: 25px;
+          padding: 15px;
+        }
+
+        @include respond(md) {
+          font-size: 40px;
+          padding: 30px;
+          margin-top: 8vh;
+          height: 50vh;
+        }
+
+        @include respond(lg) {
+          font-size: 20px;
+          padding: 34px;
+          height: 150px;
+          margin-top: 23vh;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,606 @@
+@use "variables" as vars;
+@use "sass:math";
+@use "mixins" as *;
+
+#signUpMainCon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 3vh;
+  height: auto;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+
+  @include respond(sm) {
+    width: 100%;
+    height: auto;
+    
+  }
+
+  @include respond(md) {
+    width: 100%;
+    height: auto;
+    padding: 0 5vh;
+  }
+
+  @include respond(lg) {
+      width: 100%;
+    height: auto;
+    padding: 0 20vh;
+  }
+
+  .signUpSonCon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    gap: 7vh;
+    background: vars.$bgColor3;
+    padding: 4vh;
+    border-radius: math.div(vars.$border-radius1, 8);
+
+    @include respond(sm) {
+      width: 100%;
+      height: auto;
+      padding: 4vh;
+      border-radius: math.div(vars.$border-radius1, 8);
+    }
+
+    @include respond(md) {
+      width: 100%;
+      height: auto;
+      padding: 6vh;
+      border-radius: math.div(vars.$border-radius1, 4);
+    }
+
+    @include respond(lg) {
+      width: 50%;
+      height: auto;
+      padding: 6vh;
+      border-radius: math.div(vars.$border-radius1, 8);
+    }
+
+    .create {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+
+      @include respond(sm) {
+        gap: 10px;
+      }
+
+      @include respond(md) {
+        gap: 30px;
+      }
+
+      @include respond(lg) {
+        gap: 8px;
+      }
+
+      h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 45px;
+        height: 45px;
+        padding: 6px;
+        font-size: 25px;
+        background: vars.$bgColor2;
+        color: vars.$color1;
+        border-radius: vars.$border-radius3;
+
+        @include respond(sm) {
+          font-size: 25px;
+        }
+
+        @include respond(md) {
+          width: 70px;
+          height: 70px;
+          padding: 8px;
+          font-size: 45px;
+        }
+
+        @include respond(lg) {
+          font-size: 20px;
+          width: 30px;
+          height: 30px;
+          padding: 5px;
+        }
+      }
+
+      h1 {
+        font-size: 22px;
+        color: vars.$color5;
+
+        @include respond(sm) {
+          font-size: 19px;
+        }
+
+        @include respond(md) {
+          font-size: 55px;
+        }
+
+        @include respond(lg) {
+          font-size: 25px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        text-align: center;
+        font-weight: 100;
+
+        @include respond(sm) {
+          font-size: 19px;
+        }
+
+        @include respond(md) {
+          font-size: 30px;
+        }
+
+        @include respond(lg) {
+          font-size: 14px;
+        }
+
+        a {
+          color: vars.$color5;
+
+          &:hover {
+            color: vars.$color4;
+          }
+        }
+      }
+    }
+
+    // Styling Form Contents
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 2px;
+      gap: 20px;
+
+      @include respond(sm) {
+        gap: 20px;
+      }
+
+      @include respond(md) {
+        gap: 40px;
+      }
+
+      @include respond(lg) {
+        gap: 20px;
+      }
+
+      .emailDiv {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+
+        @include respond(sm) {
+          gap: 8px;
+        }
+
+        @include respond(md) {
+          gap: 10px;
+        }
+
+        @include respond(lg) {
+          gap: 5px;
+        }
+
+        label {
+          color: vars.$color6;
+          font-weight: 600;
+          font-size: 18px;
+
+          @include respond(sm) {
+            font-size: 18px;
+          }
+
+          @include respond(md) {
+            font-size: 25px;
+          }
+
+          @include respond(lg) {
+            font-size: 15px;
+          }
+        }
+
+        input {
+          width: 100%;
+          border: 1px solid rgba(0, 128, 128, 0.219);
+          background: none;
+          color: vars.$color3;
+          outline: none;
+          padding: 12px;
+          font-size: 15px;
+
+          @include respond(sm) {
+            font-size: 15px;
+            padding: 10px;
+          }
+
+          @include respond(md) {
+            font-size: 25px;
+            padding: 15px;
+          }
+
+          @include respond(lg) {
+            font-size: 12px;
+            padding: 6px;
+          }
+
+          &:focus {
+            border: 1px rgba(87, 161, 161, 0.678) solid;
+          }
+        }
+      }
+
+      .usernameDiv {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+
+        @include respond(sm) {
+          gap: 8px;
+        }
+
+        @include respond(md) {
+          gap: 10px;
+        }
+
+        @include respond(lg) {
+          gap: 5px;
+        }
+
+        label {
+          color: vars.$color6;
+          font-weight: 600;
+          font-size: 18px;
+
+          @include respond(sm) {
+            font-size: 15px;
+          }
+
+          @include respond(md) {
+            font-size: 25px;
+          }
+
+          @include respond(lg) {
+            font-size: 15px;
+          }
+        }
+
+        input {
+          width: 100%;
+          border: 1px solid rgba(0, 128, 128, 0.219);
+          background: none;
+          color: vars.$color3;
+          outline: none;
+          padding: 12px;
+          font-size: 15px;
+
+          @include respond(sm) {
+            font-size: 15px;
+            padding: 10px;
+          }
+
+          @include respond(md) {
+            font-size: 25px;
+            padding: 15px;
+          }
+
+          @include respond(lg) {
+            font-size: 12px;
+            padding: 6px;
+          }
+
+          &:focus {
+            border: 1px rgba(87, 161, 161, 0.678) solid;
+          }
+        }
+      }
+
+      .passwordDiv {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 5px;
+
+        @include respond(sm) {
+          gap: 8px;
+        }
+
+        @include respond(md) {
+          gap: 10px;
+        }
+
+        @include respond(lg) {
+          gap: 5px;
+        }
+
+        .passwordeyeDiv {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          gap: 0px;
+
+          label {
+            color: vars.$color6;
+            font-weight: 600;
+            font-size: 18px;
+
+            @include respond(sm) {
+              font-size: 15px;
+            }
+
+            @include respond(md) {
+              font-size: 25px;
+            }
+
+            @include respond(lg) {
+              font-size: 15px;
+            }
+          }
+
+          a {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            color: vars.$color5;
+            font-size: 15px;
+
+            @include respond(sm) {
+              font-size: 15px;
+            }
+
+            @include respond(md) {
+              font-size: 25px;
+              gap: 15px;
+            }
+
+            @include respond(lg) {
+              font-size: 15px;
+              gap: 10px;
+            }
+          }
+        }
+
+        input {
+          width: 100%;
+          border: 1px solid rgba(0, 128, 128, 0.219);
+          background: none;
+          color: vars.$color3;
+          outline: none;
+          padding: 12px;
+          font-size: 15px;
+
+          @include respond(sm) {
+            font-size: 15px;
+            padding: 10px;
+          }
+
+          @include respond(md) {
+            font-size: 25px;
+            padding: 15px;
+          }
+
+          @include respond(lg) {
+            font-size: 12px;
+            padding: 6px;
+          }
+
+          &:focus {
+            border: 1px rgba(87, 161, 161, 0.678) solid;
+          }
+        }
+      }
+
+      .ulDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 10px;
+        font-size: 17px;
+        margin-top: 4vh;
+
+        @include respond(sm) {
+          font-size: 17px;
+          margin-top: 4vh;
+        }
+
+        @include respond(md) {
+          font-size: 25px;
+          padding: 15px;
+          margin-top: 3vh;
+        }
+
+        @include respond(lg) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-size: 13px;
+          padding-right: 80px;
+          margin-top: 0vh;
+        }
+
+        .ul {
+          list-style: none;
+
+          li {
+            position: relative;
+            padding-left: 1em;
+
+            &::before {
+              content: ".";
+              color: teal;
+              position: absolute;
+              font-size: 35px;
+              font-weight: 900;
+              left: 0px;
+              bottom: 0px;
+
+              @include respond(sm) {
+                font-size: 29px;
+                font-weight: 900;
+              }
+
+              @include respond(md) {
+                font-size: 46px;
+                font-weight: 900;
+              }
+
+              @include respond(lg) {
+                font-size: 25px;
+                font-weight: 900;
+              }
+            }
+          }
+        }
+      }
+
+      .signupParaDiv {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 4vh;
+
+        @include respond(sm) {
+          gap: 12px;
+          margin-top: 4vh;
+        }
+
+        @include respond(md) {
+          gap: 15px;
+  
+          margin-top: 4vh;
+        }
+
+        @include respond(lg) {
+          flex-direction: row;
+          width: 100%;
+          justify-content: space-between;
+          gap: 8px;
+          height: 7vh;
+          margin-top: 1vh;
+        }
+
+        p {
+          width: 100%;
+          font-size: 17px;
+          padding: 8px;
+
+          @include respond(sm) {
+            width: 100%;
+            font-size: 17px;
+            padding: 8px;
+          }
+
+          @include respond(md) {
+            width: 100%;
+            font-size: 25px;
+            padding: 20px;
+          }
+
+          @include respond(lg) {
+            width: 80%;
+            font-size: 13px;
+            padding: 5px;
+          }
+
+          a {
+            color: vars.$color5;
+            text-decoration: underline;
+
+            &:hover {
+              color: rgb(12, 83, 83);
+            }
+          }
+        }
+
+        .signuplink {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          padding: 15px;
+          border: 2px solid rgba(0, 128, 128, 0.219);
+
+          &:hover {
+            background: rgba(224, 221, 221, 0.884);
+          }
+
+          @include respond(sm) {
+            width: 100%;
+            border: 1px solid rgba(0, 128, 128, 0.219);
+            padding: 15px;
+          }
+
+          @include respond(md) {
+            width: 100%;
+            padding: 30px;
+            border: 2px solid rgba(0, 128, 128, 0.219);
+          }
+
+          @include respond(lg) {
+            width: 50%;
+            padding: 5px;
+            border: 1px solid rgba(0, 128, 128, 0.219);
+          }
+
+          a {
+            color: vars.$color5;
+            font-size: 20px;
+
+            @include respond(sm) {
+              font-size: 20px;
+            }
+
+            @include respond(md) {
+              font-size: 30px;
+            }
+
+            @include respond(lg) {
+              font-size: 13px;
+            }
+
+            &:hover {
+              font-weight: bolder;
+              color: rgba(14, 109, 109, 0.952);
+            }
+          }
+        }
+      }
+    }
+
+    .copyrightDiv {
+      margin-top: 8vh;
+      font-size: 13px;
+
+      @include respond(sm) {
+        font-size: 13px;
+        margin-top: 15vh;
+      }
+
+      @include respond(md) {
+        margin-top: 10vh;
+        font-size: 19px;
+      }
+
+      @include respond(lg) {
+        margin-top: 4vh;
+        font-size: 11px;
+      }
+    }
+  }
+}

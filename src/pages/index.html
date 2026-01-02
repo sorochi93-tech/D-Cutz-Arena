@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/Todolist/dist/css/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <header class="headerMain">
+      <div class="headerSon">
+        <section class="logoSec">
+          <div class="logoIcon">
+            <h2>D'</h2>
+            <h3>Cutz Arena</h3>
+          </div>
+
+          <div class="bar">
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+          </div>
+        </section>
+
+        <section class="UlSec">
+          <ul>
+            <li><a href="/Todolist/src/pages/index.html">Home</a></li>
+            <li><a href="/Todolist/src/pages/todo.html">To Do List</a></li>
+          </ul>
+        </section>
+
+        <section class="loginSignUpSec">
+          <a href="/Todolist/src/pages/login.html" class="login">Login</a>
+          <a href="/Todolist/src/pages/signUp.html" class="signUp">Sign Up</a>
+        </section>
+      </div>
+
+      <!-- Responsive Styling -->
+      <div class="mediaDiv">
+        <section class="mediaSec">
+          <ul>
+            <li><a href="/Todolist/src/pages/index.html">Home</a></li>
+            <li><a href="/Todolist/src/pages/todo.html">To Do List</a></li>
+          </ul>
+
+          <div class="loginSignIn">
+            <a href="/Todolist/src/pages/login.html" class="login">Login</a>
+            <a href="/Todolist/src/pages/signUp.html" class="signUp">Sign Up</a>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <main class="heroSection">
+      <div class="heroSecSonDiv">
+        <div class="welcomeDiv">
+          <h1>Welcome to D' Cutz Arena</h1>
+          <p>
+            Get a fresh cut, a fresh vibe! Welcome to D'Cutz Arena, where style
+            meets swagger. Our expert barbers are ready to hook you up with the
+            look that will make you feel like a boss. Come for the cut, stay for
+            the vibe!
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const bar = document.querySelector(".bar");
+      const mediaSec = document.querySelector(".mediaSec");
+
+      bar.addEventListener("click", () => {
+        bar.classList.toggle("active");
+        mediaSec.classList.toggle("hidden");
+      });
+
+      // bar.addEventListener('click', ()=>{
+      //   if(mediaSec.classList.contains("hidden")){
+      //     mediaSec.classList.remove("hidden")
+      //   }else{
+      //     mediaSec.classList.add("hidden")
+      //     bar.classList.toggle("active");
+      //   }
+      // })
+    </script>
+  </body>
+</html>

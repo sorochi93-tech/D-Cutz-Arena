@@ -1,0 +1,479 @@
+@use "sass:math";
+@use "variables" as vars;
+@use "mixins" as *;
+
+.headerMain {
+  .headerSon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    background: vars.$bgColor1;
+    color: vars.$color1;
+    position: fixed;
+    top: 0px;
+    font-size: 16px;
+    font-weight: 500;
+    z-index: 100;
+
+    @include respond(sm) {
+      padding: 0 20px;
+    }
+
+    @include respond(md) {
+      padding: 0 5vh;
+      height: 70px;
+    }
+
+    @include respond(lg) {
+      padding: 0 10vh;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 50px;
+    }
+
+    a {
+      font-size: 14px;
+      font-weight: 700;
+      color: vars.$primaryColor;
+
+      &:hover {
+        text-decoration: underline;
+        color: vars.$primaryColor2;
+      }
+    }
+
+    .logoSec {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      gap: 8px;
+
+      @include respond(sm) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      @include respond(md) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      @include respond(lg) {
+        width: 11%;
+      }
+
+      .logoIcon {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        gap: 5px;
+
+        h2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          width: 30px;
+          height: 30px;
+          padding: 5px;
+          background: vars.$bgColor2;
+          color: vars.$color1;
+          border-radius: vars.$border-radius3;
+
+          @include respond(sm) {
+            background: vars.$bgColor2;
+            color: white;
+          }
+
+          @include respond(md) {
+            width: 50px;
+            height: 50px;
+            padding: 8px;
+            font-size: 38px;
+          }
+
+          @include respond(lg) {
+            background: vars.$bgColor2;
+            color: white;
+            width: 30px;
+            height: 30px;
+            padding: 8px;
+            font-size: 30px;
+          }
+        }
+
+        h3 {
+          color: vars.$color3;
+          font-size: 26px;
+          font-weight: 800;
+          white-space: nowrap;
+
+          @include respond(md) {
+            font-weight: 900;
+            white-space: nowrap;
+            font-size: 49px;
+          }
+
+          @include respond(lg) {
+            font-size: 26px;
+            font-weight: 800;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .bar {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        cursor: pointer;
+        z-index: 9999;
+        transition: all 0.3s ease;
+
+        @include respond(sm) {
+          gap: 6px;
+        }
+
+        @include respond(md) {
+          gap: 6px;
+        }
+
+        @include respond(lg) {
+          display: none;
+        }
+
+        @include respond(xl) {
+          display: none;
+        }
+
+        .icon {
+          width: 30px;
+          height: 5px;
+          margin-top: 1px;
+          border: 1px black solid;
+          background: black;
+          transition: all 0.3s ease;
+          transform-origin: center;
+
+          @include respond(sm) {
+            width: 30px;
+            height: 5px;
+            border: 1px black solid;
+            background: black;
+          }
+
+          @include respond(md) {
+            width: 42px;
+            height: 7px;
+            margin-top: 2px;
+            border: 2px black solid;
+            background: black;
+          }
+        }
+
+        &.active {
+          .icon:nth-child(1) {
+            transform: rotate(45deg) translate(4px, 5px);
+          }
+
+          .icon:nth-child(2) {
+            opacity: 0;
+          }
+
+          .icon:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -9px);
+          }
+
+          @include respond(sm) {
+            .icon:nth-child(1) {
+              transform: rotate(45deg) translate(4px, 5px);
+            }
+
+            .icon:nth-child(2) {
+              opacity: 0;
+            }
+
+            .icon:nth-child(3) {
+              transform: rotate(-45deg) translate(7px, -9px);
+            }
+          }
+
+          @include respond(md) {
+            .icon:nth-child(1) {
+              transform: rotate(45deg) translate(9px, 10px);
+            }
+
+            .icon:nth-child(2) {
+              opacity: 0;
+            }
+
+            .icon:nth-child(3) {
+              transform: rotate(-47deg) translate(10px, -12px);
+            }
+          }
+        }
+      }
+    }
+
+    .UlSec ul {
+      display: none;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      height: 26px;
+      padding: 10px;
+      list-style: none;
+      background: vars.$bgColor3;
+      border-radius: vars.$border-radius1;
+      border: 1px rgba(0, 0, 0, 0.397) solid;
+
+      @include respond(sm) {
+        display: none;
+      }
+
+      @include respond(md) {
+        display: none;
+      }
+
+      @include respond(lg) {
+        display: flex;
+        width: 100%;
+      }
+
+      li a {
+        font-size: 14px;
+      }
+    }
+
+    .loginSignUpSec {
+      display: none;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      // width: 0%;
+      gap: 1vh;
+
+      @include respond(sm) {
+        display: none;
+      }
+
+      @include respond(md) {
+        display: none;
+      }
+
+      @include respond(lg) {
+        display: flex;
+      }
+
+      .login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 26px;
+        padding: 4px;
+        background: vars.$bgColor2;
+        border-radius: vars.$border-radius4;
+        color: vars.$color1;
+
+        &:hover {
+          color: vars.$color9;
+        }
+      }
+
+      .signUp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 26px;
+        padding: 4px;
+        background: vars.$bgColor3;
+        border-radius: vars.$border-radius5;
+      }
+    }
+  }
+
+  // Responsive Styling
+  .mediaDiv {
+    width: 100%;
+
+    .mediaSec {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: center;
+      width: 100%;
+      height: 70vh;
+      font-size: 20px;
+      align-items: center;
+      color: black;
+      margin-top: 7vh;
+      position: fixed;
+      top: 0px;
+      background: rgb(238, 236, 236);
+
+      @include respond(sm) {
+        font-size: 23px;
+        top: 5px;
+      }
+
+      @include respond(md) {
+        font-size: 40px;
+        margin-top: 7vh;
+        top: 0px;
+      }
+
+      @include respond(lg) {
+        display: none;
+      }
+
+      @include respond(xl) {
+        display: none;
+      }
+
+      &.hidden {
+        display: none !important;
+
+        @include respond(sm) {
+          display: none;
+        }
+
+        @include respond(md) {
+          display: none;
+        }
+
+        @include respond(lg) {
+          display: none;
+        }
+
+        @include respond(xl) {
+          display: none;
+        }
+      }
+
+      a {
+        color: rgba(0, 0, 0, 0.911);
+        font-weight: 600;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1vh;
+      }
+
+      .loginSignIn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 8vh;
+      }
+    }
+
+    @include respond(sm) {
+    }
+
+    @include respond(md) {
+    }
+
+    @include respond(lg) {
+      display: none;
+    }
+
+    @include respond(xl) {
+    }
+  }
+}
+
+// .footerSec {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100%;
+//     height: auto;
+//     padding: 10px;
+//     // background: vars.$bgColor11;
+//     background: rgba(144, 158, 163, 0.295);
+
+//     .footerSecSonDiv {
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: center;
+//       // align-items: center;
+//       width: 100%;
+//       background: rgb(54, 54, 54);
+//       // background: vars.$bgColor2;
+//       margin-bottom: 40px;
+//       margin-top: 40px;
+
+//       .tealBGDiv {
+//         flex-direction: row;
+//         align-items: center;
+//         justify-content: space-between;
+//         width: 100%;
+//         height: 13vh;
+//         background: rgba(46, 143, 143, 0.589);
+//         padding: 15px;
+//         border: 1px rgba(0, 128, 128, 0.445) solid;
+
+//         h3 {
+//           font-weight: 500;
+//           font-size: 16px;
+//           color: vars.$color3;
+//           padding-right: 80px;
+//           width: 100%;
+//         }
+
+//         .inputSubDiv {
+//           display: flex;
+//           flex-direction: row;
+//           justify-content: center;
+//           align-items: center;
+//           width: 100%;
+//           gap: 7px;
+
+//           input {
+//             display: flex;
+//             width: 100%;
+//             height: 30px;
+//             padding: 6px;
+//             outline: none;
+//             border: none;
+//             border-radius: math.div(vars.$border-radius1, 15);
+//             font-size: 12px;
+//           }
+
+//           a {
+//             display: flex;
+//             align-items: center;
+//             padding: 6px;
+//             background: rgb(54, 54, 54);
+//             border-radius: math.div(vars.$border-radius1, 15);
+//             height: 30px;
+//             color: vars.$color3;
+//             font-size: 12px;
+
+//             &:hover {
+//               color: blue;
+//               background: black;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }

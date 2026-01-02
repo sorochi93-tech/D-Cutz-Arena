@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/Todolist/dist/css/styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Sign Up Page</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="headerMain">
+      <div class="headerSon">
+        <section class="logoSec">
+          <div class="logoIcon">
+            <h2>D'</h2>
+            <h3>Cutz Arena</h3>
+          </div>
+
+          <div class="bar">
+            <div class="icon"></div>
+            <div class="icon"></div>
+            <div class="icon"></div>
+          </div>
+        </section>
+
+        <section class="UlSec">
+          <ul>
+            <li><a href="/Todolist/src/pages/index.html">Home</a></li>
+            <li><a href="/Todolist/src/pages/todo.html">To Do List</a></li>
+          </ul>
+        </section>
+
+        <section class="loginSignUpSec">
+          <a href="/Todolist/src/pages/login.html" class="login">Login</a>
+          <a href="/Todolist/src/pages/signUp.html" class="signUp">Sign Up</a>
+        </section>
+      </div>
+
+      <!-- Responsive Styling -->
+      <div class="mediaDiv">
+        <section class="mediaSec">
+          <ul>
+            <li><a href="/Todolist/src/pages/index.html">Home</a></li>
+            <li><a href="/Todolist/src/pages/todo.html">To Do List</a></li>
+          </ul>
+
+          <div class="loginSignIn">
+            <a href="/Todolist/src/pages/login.html" class="login">Login</a>
+            <a href="/Todolist/src/pages/signUp.html" class="signUp">Sign Up</a>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <main id="signUpMainCon">
+      <section class="signUpSonCon">
+        <div class="create">
+          <h2>D'</h2>
+          <h1>SIGN UP</h1>
+          <p>
+            Find us, engage with us and get quality cutz when you create an
+            account with us at D'Cutz Arena or
+            <a href="/Todolist/src/pages/login.html">Login</a> if you are an
+            existing user.
+          </p>
+        </div>
+
+        <form action="">
+          <div class="emailDiv">
+            <label for="text">Email:</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Enter email"
+              required
+            />
+          </div>
+
+          <div class="usernameDiv">
+            <label for="text">Username:</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter username"
+              required
+            />
+          </div>
+
+          <div class="passwordDiv">
+            <div class="passwordeyeDiv">
+              <label for="">Password:</label>
+              <a href=""
+                ><span><i class="fa-solid fa-eye"></i></span>Show</a
+              >
+            </div>
+
+            <input
+              type="text"
+              name="password"
+              id="password"
+              placeholder="Enter password"
+              required
+            />
+          </div>
+
+          <div class="ulDiv">
+            <ul class="ul">
+              <li>One lowercase character</li>
+              <li>One uppercase character</li>
+              <li>One number</li>
+            </ul>
+
+            <ul class="ul">
+              <li>One special character</li>
+              <li>8 characters minimum</li>
+            </ul>
+          </div>
+
+          <div class="signupParaDiv">
+            <div class="signuplink">
+              <a href="">Submit</a>
+            </div>
+
+            <p>
+              By clicking "Sign Up" you are creating a D'Cutz Arena account,and
+              you agree to D'Cutz Arena's <a href="">Terms of Use</a> and
+              <a href="">Privacy Policy</a>
+            </p>
+          </div>
+        </form>
+
+        <div class="copyrightDiv">
+          <p>
+            Copyright &copy; 2025. All rights reserved. D'Cutz Arena is a unisex
+            hairstyle saloon of <b>The SEGNET Group.</b>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const bar = document.querySelector(".bar");
+      const mediaSec = document.querySelector(".mediaSec");
+
+      bar.addEventListener("click", () => {
+        bar.classList.toggle("active");
+        mediaSec.classList.toggle("hidden");
+      });
+
+      // bar.addEventListener("click", () => {
+      //   if (mediaSec.classList.contains("hidden")) {
+      //     mediaSec.classList.remove("hidden");
+      //   } else {
+      //     mediaSec.classList.add("hidden");
+      //   }
+      // });
+    </script>
+  </body>
+</html>

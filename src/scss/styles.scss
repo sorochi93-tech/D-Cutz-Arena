@@ -1,0 +1,25 @@
+// base
+
+@use 'base' as *;
+
+@use 'index' as *;
+
+@use 'login' as *;
+
+@use 'signUp' as *;
+
+@use 'todo' as *;
+
+@use 'variables' as *;
+
+@use 'header-footer' as *;
+
+@use "mixins" as *;
+
+@use "base" as *;
+
+.heroSecSonDiv{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
