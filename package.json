@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "build": "npx sass src/scss:src/scss/css --style=compressed",
-  "watch": "npx sass --watch src/scss:src/scss/css",
+  "build": "sass src/scss:src/scss/css --style=compressed",
+  "watch": "sass --watch src/scss:src/scss/css",
   "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
