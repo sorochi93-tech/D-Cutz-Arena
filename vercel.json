@@ -10,9 +10,9 @@
     }
   ],
   "routes": [
-    { "src": "/", "dest": "../../src/pages/index.html" },
-    { "src": "/login", "dest": "../../src/pages/login.html" },
-    { "src": "/signup", "dest": "../../src/pages/signup.html" },
-    { "src": "/todo", "dest": "../../src/pages/todo.html" }
+    { "src": "/", "dest": "/src/pages/index.html" },
+    { "src": "/login", "dest": "/src/pages/login.html" },
+    { "src": "/signup", "dest": "/src/pages/signup.html" },
+    { "src": "/todo", "dest": "/src/pages/todo.html" }
   ]
 }
