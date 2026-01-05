@@ -1,13 +1,14 @@
 {
   "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "src/scss/css",
   "builds": [
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": {}
+      "config": {
+        "distDir": "src/scss/css"
+      }
     }
-  ],
-  "routes": [],
-  "buildCommand": "npm run build",
-  "outputDirectory": "src/scss/css"
+  ]
 }

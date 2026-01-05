@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "build": "npx sass src/scss:src/scss/css --style=compressed",
-  "watch": "npx sass --watch src/scss:src/scss/css",
-  "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "chmod +x ./node_modules/.bin/sass",
+    "build": "npx sass src/scss:src/scss/css --style=compressed",
+    "watch": "npx sass --watch src/scss:src/scss/css",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
